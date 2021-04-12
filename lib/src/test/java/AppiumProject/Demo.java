@@ -17,16 +17,15 @@ public class Demo {
 	 MobileDriver<WebElement> driver;
     @BeforeClass
     public void setUp() throws MalformedURLException {
-        DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("automationName" , "UiAutomator1");
-        caps.setCapability("platformName" , "Android");
-        caps.setCapability("platformVersion" , "7.1.1");
-        caps.setCapability("deviceName" , "Android Emulator");
-        caps.setCapability("BROWSER_NAME", "Chrome");
+        DesiredCapabilities de = new DesiredCapabilities();
+        de.setCapability("deviceName", "Pixel_3_API_30");
+        de.setCapability("BROWSER_NAME", "Chrome");
+        de.setCapability("platformName", "Android");
+        de.setBrowserName("chrome");
         caps.setPlatform(org.openqa.selenium.Platform.MAC);
        // caps.setCapability("app" , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
        // driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
-       driver = new AndroidDriver<WebElement>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
+       driver = new AndroidDriver<WebElement>(new URL("http://0.0.0.0:4723/wd/hub"), de);
     }
 
     @Test
