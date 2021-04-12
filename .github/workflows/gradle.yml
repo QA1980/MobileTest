@@ -22,15 +22,14 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-<<<<<<< HEAD
-=======
+
     - name: Install and Run Appium Server
       run: |
         chmod +x ./scripts/RunAppiumServer.sh # install and run appium server in the background
         ./scripts/RunAppiumServer.sh
       
     #- name: Install and Run Appium Server
->>>>>>> d9835f67db97629228eba863844793f227f055bb
+
     #- name: Install and Run Appium Server
      # uses: moatazeldebsy/appium-server-gitHub-action@V1.0.5
     - name: Run Appium Tests
