@@ -6,7 +6,6 @@ import io.appium.java_client.android.AndroidDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -14,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class Demo {
-	
+	//test
 	 MobileDriver<WebElement> driver;
     @BeforeClass
     public void setUp() throws MalformedURLException {
@@ -32,7 +31,8 @@ public class Demo {
 
     @Test
     public void test_Appium() throws MalformedURLException, InterruptedException {
-       // String message = "Hello GitHub Actions";
+        String message = "Hello GitHub Actions";
+        System.out.println(message);
        driver.navigate().to("https://staging.bperx.com/Voucher/Offer/AYH4CBK7LG2TT3N3XWJ9");
         System.out.println("The current URL is"+driver.getCurrentUrl());
     }
