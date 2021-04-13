@@ -8,9 +8,9 @@ import java.net.URL;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -36,18 +36,11 @@ public class Demo {
 
     @Test
     public void test_Appium() throws MalformedURLException, InterruptedException {
-       //Click continue 
-    	driver.findElement(By.id("com.android.permissioncontroller:id/continue_button")).click();
-      //Click OK 
-    	driver.findElement(By.id("com.android.permissioncontroller:id/continue_button")).click();
-    	 // 4. Click 'my_text_fieldCD'
-    	by = By.id("io.selendroid.testapp:id/my_text_field");
-        driver.findElement(by).click();
-     // 5. Type 'qa tester' in 'my_text_fieldCD'
-      
-        by = By.id("io.selendroid.testapp:id/my_text_field");
-        driver.findElement(by).sendKeys("qa tester");
-
+    	String message = "Hello GitHub Actions";
+        WebElement messageTxt = driver.findElement(By.id("my_text_field"));
+        messageTxt.sendKeys(message);
+        System.out.println(messageTxt.getText());
+        Assert.assertEquals(message,messageTxt.getText());
     }
 
     @AfterClass
