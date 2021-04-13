@@ -21,6 +21,7 @@ public class Demo {
 	 By by;
     @BeforeClass
     public void setUp() throws MalformedURLException {
+    	System.out.println(System.getProperty("user.dir"));
         DesiredCapabilities de = new DesiredCapabilities();
         de.setCapability("deviceName", "Pixel_3_API_30");
        // de.setCapability("BROWSER_NAME", "Chrome");
