@@ -24,11 +24,11 @@ public class Demo {
     	System.out.println(System.getProperty("user.dir"));
         DesiredCapabilities de = new DesiredCapabilities();
         de.setCapability("deviceName", "Pixel_3_API_30");
-       // de.setCapability("BROWSER_NAME", "Chrome");
+       de.setCapability("BROWSER_NAME", "Chrome");
         de.setCapability("platformName", "Android");
-        de.setCapability(MobileCapabilityType.APP , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
-       // de.setBrowserName("chrome");
-       // de.setPlatform(org.openqa.selenium.Platform.MAC);
+       // de.setCapability(MobileCapabilityType.APP , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
+        de.setBrowserName("chrome");
+       de.setPlatform(org.openqa.selenium.Platform.MAC);
        // caps.setCapability("app" , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
        // driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
        driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), de);
@@ -36,11 +36,12 @@ public class Demo {
 
     @Test
     public void test_Appium() throws MalformedURLException, InterruptedException {
-    	String message = "Hello GitHub Actions";
-        WebElement messageTxt = driver.findElement(By.id("my_text_field"));
-        messageTxt.sendKeys(message);
-        System.out.println(messageTxt.getText());
-        Assert.assertEquals(message,messageTxt.getText());
+    	driver.navigate().to("https://staging.bperx.com/Voucher/Offer/AYH4CBK7LG2TT3N3XWJ9");
+    	//String message = "Hello GitHub Actions";
+       // WebElement messageTxt = driver.findElement(By.id("my_text_field"));
+       // messageTxt.sendKeys(message);
+        //System.out.println(messageTxt.getText());
+       // Assert.assertEquals(message,messageTxt.getText());
     }
 
     @AfterClass
