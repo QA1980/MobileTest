@@ -1,6 +1,7 @@
 package AppiumProject;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -24,7 +25,7 @@ public class Demo {
         de.setCapability("deviceName", "Pixel_3_API_30");
        // de.setCapability("BROWSER_NAME", "Chrome");
         de.setCapability("platformName", "Android");
-        de.setCapability("app" , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
+        de.setCapability(MobileCapabilityType.APP , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
        // de.setBrowserName("chrome");
        // de.setPlatform(org.openqa.selenium.Platform.MAC);
        // caps.setCapability("app" , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
