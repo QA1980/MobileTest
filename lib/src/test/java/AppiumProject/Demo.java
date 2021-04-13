@@ -27,8 +27,8 @@ public class Demo {
        //de.setCapability("BROWSER_NAME", "Chrome");
         de.setCapability("platformName", "Android");
         de.setCapability(MobileCapabilityType.APP , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
-        de.setBrowserName("chrome");
-       de.setPlatform(org.openqa.selenium.Platform.MAC);
+        //de.setBrowserName("chrome");
+       //de.setPlatform(org.openqa.selenium.Platform.MAC);
         //caps.setCapability("app" , System.getProperty("user.dir")+"/apps/selendroid-test-app-0.17.0.apk");
        // driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
        driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), de);
