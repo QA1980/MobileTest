@@ -1,20 +1,22 @@
 package AppiumProject;
 
-import io.appium.java_client.MobileDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class Demo {
 	//test
-	 MobileDriver driver;
+	 WebDriver driver;
     @BeforeClass
     public void setUp() throws MalformedURLException {
         DesiredCapabilities de = new DesiredCapabilities();
