@@ -5,6 +5,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -36,13 +37,14 @@ public class Demo {
 
     @Test
     public void test_Appium() throws MalformedURLException, InterruptedException {
-    	
+    	 // set timeout for driver actions (similar to step timeout)
+        driver.manage().timeouts().implicitlyWait(15000, TimeUnit.MILLISECONDS);
 //    	String message = "Hello GitHub Actions";
 //       WebElement messageTxt = driver.findElement(By.id("my_text_field"));
 //        messageTxt.sendKeys(message);
 //        System.out.println(messageTxt.getText());
 //       Assert.assertEquals(message,messageTxt.getText());
-    	  by = By.id("io.selendroid.testapp:id/my_text_field");
+        by = By.id("io.selendroid.testapp:id/my_text_field");
     	    driver.findElement(by).click();
     	    
     	    by = By.id("io.selendroid.testapp:idtext_field");
