@@ -28,6 +28,11 @@ jobs:
         arch: x86_64
         profile: Nexus 6
         script: ./gradlew test --info # running our test with info to check the results
+    - name: Unit tests results
+      uses: actions/upload-artifact@v1
+      with:
+          name: unit-tests-results
+          path: app/build/reports/tests/testDebugUnitTest/index.html
   
 
 
