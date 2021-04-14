@@ -47,7 +47,7 @@ public class Demo {
         by = By.id("io.selendroid.testapp:id/my_text_field");
     	    driver.findElement(by).click();
     	    
-    	    by = By.id("io.selendroid.testapp:idtext_field");
+    	    by = By.id("io.selendroid.testapp:id/my_text_field");
     	   driver.findElement(by).sendKeys("qa tester");
     	
     }
