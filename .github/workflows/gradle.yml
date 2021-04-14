@@ -28,6 +28,9 @@ jobs:
         arch: x86_64
         profile: Nexus 6
         script: ./gradlew test --info # running our test with info to check the results
+    - name: Android Test Report
+      uses: asadmansr/android-test-report-action@v1.2.0
+      if: ${{ always() }} # IMPORTANT: run Android Test Report regardless
    
 
 
