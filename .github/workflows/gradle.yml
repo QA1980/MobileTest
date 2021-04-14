@@ -33,7 +33,7 @@ jobs:
       if: ${{ always() }} # IMPORTANT: Upload reports regardless of status
       with:
           name: reports
-          path: app/build/test-results # path to where the xml test results are stored
+          path: /Users/runner/work/MobileTest/MobileTest/lib/build/test-results/test # path to where the xml test results are stored
           
   
   
