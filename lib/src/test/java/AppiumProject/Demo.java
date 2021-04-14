@@ -37,11 +37,17 @@ public class Demo {
     @Test
     public void test_Appium() throws MalformedURLException, InterruptedException {
     	
-    	String message = "Hello GitHub Actions";
-       WebElement messageTxt = driver.findElement(By.id("my_text_field"));
-        messageTxt.sendKeys(message);
-        System.out.println(messageTxt.getText());
-       //Assert.assertEquals(message,messageTxt.getText());
+//    	String message = "Hello GitHub Actions";
+//       WebElement messageTxt = driver.findElement(By.id("my_text_field"));
+//        messageTxt.sendKeys(message);
+//        System.out.println(messageTxt.getText());
+//       Assert.assertEquals(message,messageTxt.getText());
+    	  by = By.id("io.selendroid.testapp:id/my_text_field");
+    	    driver.findElement(by).click();
+    	    
+    	    by = By.id("io.selendroid.testapp:id/my_text_field");
+    	    driver.findElement(by).sendKeys("qa tester");
+    	
     }
 
     @AfterClass
