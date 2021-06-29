@@ -8,9 +8,9 @@ on:
       - 'ios/**'
       - '**.md'
       - '**/ios.yml'
-defaults:
-  run:
-    working-directory: android
+#defaults:
+  #run:
+   # working-directory: android
 jobs:
   EspressoBuild:
     runs-on: ubuntu-20.04
