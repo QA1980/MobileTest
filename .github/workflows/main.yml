@@ -1,4 +1,4 @@
-name: Android  Sample App
+name: Android  Sample App/ release APK
 
 on:
   push:
